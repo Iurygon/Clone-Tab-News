@@ -14,6 +14,7 @@ async function query(objectSelect) {
     return result;
   } catch (error) {
     console.log(error);
+    throw error;
   } finally {
     await client.end();
   }
